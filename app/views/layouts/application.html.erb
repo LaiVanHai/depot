@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Books Store</title>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+</head>
+<body id="store">
+    <div id="banner">
+        <%= image_tag("logo.png", :size => "90x90") %>
+        <%= @page_title || "Books Store" %>
+    </div>
+    <div id="columns">
+        <div id="side">
+            <a href="#">Home</a><br />
+            <a href="#">FAQ</a><br />
+            <a href="#">News</a><br />
+            <a href="#">Contact</a><br />
+        </div>
+        <div id="main">
+            <%= yield %>
+        </div>
+    </div> 
+</body>
+</html>
